@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
-class LogInTextField extends StatefulWidget {
-  LogInTextField({
+class PasswordTextField extends StatefulWidget {
+  PasswordTextField({
     Key? key,
     required this.controller,
     required this.hintText,
@@ -18,20 +18,20 @@ class LogInTextField extends StatefulWidget {
   final String eyeIcon;
 
   @override
-  State<LogInTextField> createState() => _LogInTextFieldState();
+  State<PasswordTextField> createState() => _PasswordTextFieldState();
 
   // Public method to toggle the obscureText state
   void toggleObscureText() {
-    _LogInTextFieldState.toggleObscureText();
+    _PasswordTextFieldState.toggleObscureText();
   }
 
   // Public property to set the obscureText state
   set isObscureText(bool value) {
-    _LogInTextFieldState.obscureText = value;
+    _PasswordTextFieldState.obscureText = value;
   }
 }
 
-class _LogInTextFieldState extends State<LogInTextField> {
+class _PasswordTextFieldState extends State<PasswordTextField> {
   static bool obscureText = true; // Store the current state of text obscuring
 
   @override

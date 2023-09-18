@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:unad_app/components/textfield.dart';
+import 'package:unad_app/components/password_textfield.dart';
 import 'package:unad_app/components/login_button.dart';
+import 'package:unad_app/components/login_textfield.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -60,16 +61,14 @@ class _LogInState extends State<LogIn> {
                           const SizedBox(height: 30),
 
                           //user textfield
-                          LogInTextField(
-                            eyeIcon: "assets/icons/operation.png",
-                            controller: usernameController,
+                          LoginTextfield(
                             hintText: "Cédula o pasaporte",
-                            initiallyObscure: false,
+                            controller: usernameController,
                           ),
                           const SizedBox(height: 25),
 
                           //password textfield
-                          LogInTextField(
+                          PasswordTextField(
                             eyeIcon: "assets/icons/vision.png",
                             controller: passwordController,
                             hintText: "Contraseña",
