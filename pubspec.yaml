@@ -43,17 +43,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
 
-
-flutter_launcher_icons:
-  android: true
-  image_path: assets/Asset 3.png
-  #adaptive_icon_background: "#ed1e79"
-  min_sdk_android: 21
-  #adaptive_icon_foreground: "assets/Untitled-2-01.png"
-  
-  
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
