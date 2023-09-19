@@ -22,10 +22,13 @@ class _SignUpState extends State<SignUp> {
       resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFF06483A),
       appBar: AppBar(
-        backgroundColor: Color(0xFF06483A),
-        leading: Icon(
-          CupertinoIcons.arrow_left_square,
-          size: 40,
+        backgroundColor: const Color(0xFF06483A),
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 15, top: 15),
+          child: Icon(
+            CupertinoIcons.arrow_left_square,
+            size: 40,
+          ),
         ),
         elevation: 0,
       ),
