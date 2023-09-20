@@ -63,7 +63,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
         children: [
           Expanded(
             child: TextField(
-              scrollPadding: EdgeInsets.only(bottom: 60),
+              scrollPadding: const EdgeInsets.only(bottom: 60),
               controller: widget.controller,
               obscureText:
                   obscureText, // Use the current state of text obscuring
@@ -84,7 +84,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
                     });
                   },
                   child: Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Image.asset(
                       obscureText
                           ? widget.eyeIcon

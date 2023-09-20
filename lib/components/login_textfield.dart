@@ -6,6 +6,7 @@ class LoginTextfield extends StatelessWidget {
       {super.key, required this.controller, required this.hintText});
 
   final String hintText;
+  // ignore: prefer_typing_uninitialized_variables
   final controller;
 
   @override

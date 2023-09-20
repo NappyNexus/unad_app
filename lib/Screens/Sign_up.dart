@@ -62,65 +62,63 @@ class _SignUpState extends State<SignUp> {
                 children: [
                   Flexible(
                     flex: 30,
-                    child: Container(
-                      child: Column(
-                        children: [
-                          const SizedBox(height: 40),
-                          //Crear cuenta
-                          Text(
-                            "Crear una cuenta",
-                            style: GoogleFonts.poppins(
-                                fontSize: 24, fontWeight: FontWeight.w600),
-                          ),
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 40),
+                        //Crear cuenta
+                        Text(
+                          "Crear una cuenta",
+                          style: GoogleFonts.poppins(
+                              fontSize: 24, fontWeight: FontWeight.w600),
+                        ),
 
-                          const SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
-                          //user textfield
-                          LoginTextfield(
-                            hintText: "Cédula o pasaporte",
-                            controller: usernameController,
-                          ),
-                          const SizedBox(height: 20),
+                        //user textfield
+                        LoginTextfield(
+                          hintText: "Cédula o pasaporte",
+                          controller: usernameController,
+                        ),
+                        const SizedBox(height: 20),
 
-                          //Numero de matricula textfield
-                          LoginTextfield(
-                            hintText: "No. Matrícula",
-                            controller: usernameController,
-                          ),
-                          const SizedBox(height: 20),
+                        //Numero de matricula textfield
+                        LoginTextfield(
+                          hintText: "No. Matrícula",
+                          controller: usernameController,
+                        ),
+                        const SizedBox(height: 20),
 
-                          //Numero de matricula textfield
-                          LoginTextfield(
-                            hintText: "Correo institucional",
-                            controller: usernameController,
-                          ),
-                          const SizedBox(height: 20),
+                        //Numero de matricula textfield
+                        LoginTextfield(
+                          hintText: "Correo institucional",
+                          controller: usernameController,
+                        ),
+                        const SizedBox(height: 20),
 
-                          //password textfield
-                          PasswordTextField(
-                            eyeIcon: "assets/icons/vision.png",
-                            controller: passwordController,
-                            hintText: "Contraseña",
-                          ),
+                        //password textfield
+                        PasswordTextField(
+                          eyeIcon: "assets/icons/vision.png",
+                          controller: passwordController,
+                          hintText: "Contraseña",
+                        ),
 
-                          const SizedBox(height: 20),
+                        const SizedBox(height: 20),
 
-                          //sign in button
-                          const LogInGenerlButton("REGISTRARME"),
-                          const SizedBox(height: 60),
+                        //sign in button
+                        const LogInGenerlButton("REGISTRARME"),
+                        const SizedBox(height: 60),
 
-                          Text(
-                            "Ya tienes una cuenta?",
-                            style: GoogleFonts.inter(
-                                fontSize: 16, color: Color(0xffA1A1A1)),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          //log in button
-                          const LogInGenerlButton("INICAR SESION"),
-                        ],
-                      ),
+                        Text(
+                          "Ya tienes una cuenta?",
+                          style: GoogleFonts.inter(
+                              fontSize: 16, color: const Color(0xffA1A1A1)),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        //log in button
+                        const LogInGenerlButton("INICAR SESION"),
+                      ],
                     ),
                   ),
                   //contact info
@@ -135,6 +133,5 @@ class _SignUpState extends State<SignUp> {
         ],
       ),
     );
-    ;
   }
 }

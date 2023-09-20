@@ -13,21 +13,20 @@ class RegiterButton extends StatelessWidget {
       onPressed: () => context.go("/Sign_up"),
       child: Text(buttonText),
       style: TextButton.styleFrom(
-        minimumSize: Size(200, 50),
+        minimumSize: const Size(200, 50),
         foregroundColor: Colors.white,
-        backgroundColor: Color(0xfffab61a),
+        backgroundColor: const Color(0xfffab61a),
         textStyle: GoogleFonts.inter(
           fontSize: 16,
           fontWeight: FontWeight.w600,
           height: 1.375,
           letterSpacing: -0.32,
-          color: Color(0xffffffff),
+          color: const Color(0xffffffff),
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
       ),
     );
-    ;
   }
 }
