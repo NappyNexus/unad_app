@@ -75,7 +75,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                           "Por favor introduzca su correo institucional",
                           style: GoogleFonts.inter(
                             fontSize: 16,
-                            color: Color(0xFFA1A1A1),
+                            color: const Color(0xFFA1A1A1),
                           ),
                         ),
                         const SizedBox(height: 20),
