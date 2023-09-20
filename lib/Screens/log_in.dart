@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:unad_app/components/password_textfield.dart';
 import 'package:unad_app/components/login_button.dart';
 import 'package:unad_app/components/login_textfield.dart';
+import 'package:go_router/go_router.dart';
+import 'package:unad_app/components/register_button.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -81,7 +83,7 @@ class _LogInState extends State<LogIn> {
                           const SizedBox(height: 20),
 
                           //sign in button
-                          const LogInGenerlButton("REGISTRARME"),
+                          const RegiterButton("REGISTRARME"),
                           const SizedBox(height: 20),
 
                           //forgot password

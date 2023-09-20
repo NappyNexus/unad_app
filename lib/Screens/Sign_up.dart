@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:unad_app/components/login_button.dart';
 import 'package:unad_app/components/login_textfield.dart';
 import 'package:unad_app/components/password_textfield.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -23,11 +24,14 @@ class _SignUpState extends State<SignUp> {
       backgroundColor: const Color(0xFF06483A),
       appBar: AppBar(
         backgroundColor: const Color(0xFF06483A),
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 15, top: 15),
-          child: Icon(
-            CupertinoIcons.arrow_left_square,
-            size: 40,
+        leading: GestureDetector(
+          onTap: () => GoRouter.of(context).go("/"),
+          child: const Padding(
+            padding: EdgeInsets.only(left: 15, top: 15),
+            child: Icon(
+              CupertinoIcons.arrow_left_square,
+              size: 40,
+            ),
           ),
         ),
         elevation: 0,
