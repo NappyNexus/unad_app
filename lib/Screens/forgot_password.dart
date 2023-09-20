@@ -2,24 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:unad_app/components/password_textfield.dart';
 import 'package:unad_app/components/login_button.dart';
 import 'package:unad_app/components/login_textfield.dart';
-//import 'package:go_router/go_router.dart';
-import 'package:unad_app/components/register_button.dart';
 
-class LogIn extends StatefulWidget {
-  const LogIn({super.key});
+class ForgotPasswordScreen extends StatefulWidget {
+  const ForgotPasswordScreen({super.key});
 
   @override
-  State<StatefulWidget> createState() {
-    return _LogInState();
-  }
+  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
 }
 
-class _LogInState extends State<LogIn> {
+class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   final usernameController = TextEditingController();
-  final passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +21,16 @@ class _LogInState extends State<LogIn> {
       backgroundColor: const Color(0xFF06483A),
       appBar: AppBar(
         backgroundColor: const Color(0xFF06483A),
+        leading: GestureDetector(
+          onTap: () => GoRouter.of(context).go("/"),
+          child: const Padding(
+            padding: EdgeInsets.only(left: 15, top: 15),
+            child: Icon(
+              CupertinoIcons.arrow_left_square,
+              size: 40,
+            ),
+          ),
+        ),
         elevation: 0,
       ),
       body: Column(
@@ -60,50 +64,44 @@ class _LogInState extends State<LogIn> {
                         const SizedBox(height: 40),
                         //login
                         Text(
-                          "Log in",
+                          "Olvidaste tu Contraseña?",
                           style: GoogleFonts.poppins(
                               fontSize: 24, fontWeight: FontWeight.w600),
                         ),
 
-                        const SizedBox(height: 30),
+                        const SizedBox(height: 20),
 
+                        Text(
+                          "Por favor introduzca su correo institucional",
+                          style: GoogleFonts.inter(
+                            fontSize: 16,
+                            color: Color(0xFFA1A1A1),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        Container(
+                          width: 370,
+                          child: Text(
+                            "Será enviado un código a su correo institucional para un rápido restablecimiento de contraseña",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.inter(
+                              fontSize: 16,
+                              color: Color(0xFFA1A1A1),
+                              height: 1.4,
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(height: 30),
                         //user textfield
                         LoginTextfield(
-                          hintText: "Cédula o pasaporte",
+                          hintText: "Correo Institucional",
                           controller: usernameController,
                         ),
                         const SizedBox(height: 25),
 
-                        //password textfield
-                        PasswordTextField(
-                          eyeIcon: "assets/icons/vision.png",
-                          controller: passwordController,
-                          hintText: "Contraseña",
-                        ),
-
-                        const SizedBox(height: 20),
-
                         //log in button
-                        const LogInGenerlButton("INICAR SESION"),
-                        const SizedBox(height: 20),
-
-                        //sign in button
-                        const RegiterButton("REGISTRARME"),
-                        const SizedBox(height: 20),
-
-                        //forgot password
-                        GestureDetector(
-                          onTap: () =>
-                              GoRouter.of(context).go("/forgot_password"),
-                          child: Text(
-                            "Olvidé mi contraseña",
-                            style: GoogleFonts.poppins(
-                              fontSize: 14,
-                              decoration: TextDecoration.underline,
-                              color: const Color(0xFF06483A),
-                            ),
-                          ),
-                        ),
+                        const LogInGenerlButton("SIGUIENTE"),
                       ],
                     ),
                   ),
@@ -120,5 +118,6 @@ class _LogInState extends State<LogIn> {
         ],
       ),
     );
+    ;
   }
 }

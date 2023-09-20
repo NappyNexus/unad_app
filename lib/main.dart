@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:unad_app/Screens/forgot_password.dart';
 import 'package:unad_app/Screens/log_in.dart';
 import 'package:unad_app/Screens/Sign_up.dart';
 
@@ -25,6 +26,13 @@ final GoRouter _router = GoRouter(
             return const SignUp();
           },
         ),
+        GoRoute(
+          path: 'forgot_password',
+          name: "ForgotPasswordScreen",
+          builder: (BuildContext context, GoRouterState state) {
+            return const ForgotPasswordScreen();
+          },
+        ),
       ],
     ),
   ],
@@ -38,7 +46,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: _router,
-      // home: SignUp(),
+      // home: ForgotPasswordScreen(),
     );
   }
 }
