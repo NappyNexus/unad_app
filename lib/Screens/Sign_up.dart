@@ -75,23 +75,20 @@ class _SignUpState extends State<SignUp> {
                         const SizedBox(height: 20),
 
                         //user textfield
-                        LoginTextfield(
+                        const LoginTextfield(
                           hintText: "Cédula o pasaporte",
-                          controller: usernameController,
                         ),
                         const SizedBox(height: 20),
 
                         //Numero de matricula textfield
-                        LoginTextfield(
+                        const LoginTextfield(
                           hintText: "No. Matrícula",
-                          controller: usernameController,
                         ),
                         const SizedBox(height: 20),
 
                         //Numero de matricula textfield
-                        LoginTextfield(
+                        const LoginTextfield(
                           hintText: "Correo institucional",
-                          controller: usernameController,
                         ),
                         const SizedBox(height: 20),
 

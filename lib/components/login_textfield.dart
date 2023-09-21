@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginTextfield extends StatelessWidget {
-  const LoginTextfield(
-      {super.key, required this.controller, required this.hintText});
+  const LoginTextfield({super.key, required this.hintText});
 
   final String hintText;
-  // ignore: prefer_typing_uninitialized_variables
-  final controller;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +25,6 @@ class LoginTextfield extends StatelessWidget {
           Expanded(
             child: TextField(
               scrollPadding: const EdgeInsets.only(bottom: 60),
-              controller: controller, // Use the current state of text obscuring
               decoration: InputDecoration(
                 hintText: hintText,
                 border: InputBorder.none,

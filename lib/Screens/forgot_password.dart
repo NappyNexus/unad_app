@@ -94,9 +94,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
                         const SizedBox(height: 30),
                         //user textfield
-                        LoginTextfield(
+                        const LoginTextfield(
                           hintText: "Correo Institucional",
-                          controller: usernameController,
                         ),
                         const SizedBox(height: 25),
 

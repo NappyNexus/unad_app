@@ -68,9 +68,8 @@ class _LogInState extends State<LogIn> {
                         const SizedBox(height: 30),
 
                         //user textfield
-                        LoginTextfield(
+                        const LoginTextfield(
                           hintText: "Cédula o pasaporte",
-                          controller: usernameController,
                         ),
                         const SizedBox(height: 25),
 
