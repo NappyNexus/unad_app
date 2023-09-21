@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LogInGenerlButton extends StatelessWidget {
@@ -9,8 +10,7 @@ class LogInGenerlButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
-      child: Text(buttonText),
+      onPressed: () => context.go("/"),
       style: TextButton.styleFrom(
         minimumSize: const Size(200, 50),
         foregroundColor: Colors.white,
@@ -26,6 +26,7 @@ class LogInGenerlButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
       ),
+      child: Text(buttonText),
     );
   }
 }
