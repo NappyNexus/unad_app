@@ -6,7 +6,6 @@ import 'package:unad_app/components/password_textfield.dart';
 import 'package:unad_app/components/login_button.dart';
 import 'package:unad_app/components/login_textfield.dart';
 //import 'package:go_router/go_router.dart';
-import 'package:unad_app/components/register_button.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
