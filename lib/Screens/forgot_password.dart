@@ -35,7 +35,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       ),
       body: Column(
         children: [
-          const SizedBox(height: 30),
           //logo
           Image.asset(
             "assets/logo-light-official.png",
@@ -100,7 +99,10 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         const SizedBox(height: 25),
 
                         //log in button
-                        const LogInGenerlButton("SIGUIENTE"),
+                        LogInGenerlButton(
+                          buttonText: "SIGUIENTE",
+                          onPressed: () => context.go("/"),
+                        ),
                       ],
                     ),
                   ),

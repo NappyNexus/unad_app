@@ -102,7 +102,10 @@ class _SignUpState extends State<SignUp> {
                         const SizedBox(height: 20),
 
                         //sign in button
-                        const LogInGenerlButton("REGISTRARME"),
+                        LogInGenerlButton(
+                          buttonText: "REGISTRARME",
+                          onPressed: () => context.go("/Sign_up"),
+                        ),
                         const SizedBox(height: 60),
 
                         Text(
@@ -114,7 +117,10 @@ class _SignUpState extends State<SignUp> {
                           height: 10,
                         ),
                         //log in button
-                        const LogInGenerlButton("INICAR SESION"),
+                        LogInGenerlButton(
+                          buttonText: "INICAR SESION",
+                          onPressed: () => context.go("/"),
+                        ),
                       ],
                     ),
                   ),

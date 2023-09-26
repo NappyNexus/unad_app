@@ -83,11 +83,17 @@ class _LogInState extends State<LogIn> {
                         const SizedBox(height: 20),
 
                         //log in button
-                        const LogInGenerlButton("INICAR SESION"),
+                        LogInGenerlButton(
+                          buttonText: "INICAR SESION",
+                          onPressed: () => context.go("/"),
+                        ),
                         const SizedBox(height: 20),
 
                         //sign in button
-                        const RegiterButton("REGISTRARME"),
+                        LogInGenerlButton(
+                          buttonText: "REGISTRARME",
+                          onPressed: () => context.go("/Sign_up"),
+                        ),
                         const SizedBox(height: 20),
 
                         //forgot password

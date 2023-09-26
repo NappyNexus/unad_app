@@ -3,14 +3,16 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LogInGenerlButton extends StatelessWidget {
-  const LogInGenerlButton(this.buttonText, {super.key});
+  const LogInGenerlButton(
+      {super.key, required this.buttonText, required this.onPressed});
 
   final String buttonText;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () => context.go("/"),
+      onPressed: onPressed,
       style: TextButton.styleFrom(
         minimumSize: const Size(200, 50),
         foregroundColor: Colors.white,
