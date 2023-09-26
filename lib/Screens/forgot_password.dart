@@ -14,6 +14,7 @@ class ForgotPasswordScreen extends StatefulWidget {
 
 class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   final usernameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,12 +97,13 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         const LoginTextfield(
                           hintText: "Correo Institucional",
                         ),
+
                         const SizedBox(height: 25),
 
                         //log in button
                         LogInGenerlButton(
                           buttonText: "SIGUIENTE",
-                          onPressed: () => context.go("/"),
+                          onPressed: () {},
                         ),
                       ],
                     ),
