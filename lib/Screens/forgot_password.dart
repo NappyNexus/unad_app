@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:unad_app/components/login_button.dart';
-import 'package:unad_app/components/login_textfield.dart';
+import 'package:unad_app/features/email_validation.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -93,18 +92,10 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                         ),
 
                         const SizedBox(height: 30),
-                        //user textfield
-                        const LoginTextfield(
-                          hintText: "Correo Institucional",
-                        ),
 
+                        // user textfield
+                        EmailValidationForm(),
                         const SizedBox(height: 25),
-
-                        //log in button
-                        LogInGenerlButton(
-                          buttonText: "SIGUIENTE",
-                          onPressed: () {},
-                        ),
                       ],
                     ),
                   ),
