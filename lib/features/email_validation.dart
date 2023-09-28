@@ -24,11 +24,15 @@ class _EmailValidationFormState extends State<EmailValidationForm> {
                 controller: _emailController,
                 decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xFF545f71)),
+                      borderSide: const BorderSide(
+                        color: Color(0xFF545f71),
+                      ),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xFF545f71)),
+                      borderSide: const BorderSide(
+                        color: Color(0xFF545f71),
+                      ),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     border: const OutlineInputBorder(),
@@ -77,7 +81,7 @@ class _EmailValidationFormState extends State<EmailValidationForm> {
                   borderRadius: BorderRadius.circular(15),
                 ),
               ),
-              child: Text('SIGUIENTE'),
+              child: const Text('SIGUIENTE'),
             ),
           ],
         ),
