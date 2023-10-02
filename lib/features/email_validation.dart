@@ -56,6 +56,7 @@ class _EmailValidationFormState extends State<EmailValidationForm> {
               ),
             ),
             const SizedBox(height: 25),
+            //ConfirmationAlert(),
             TextButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
@@ -63,7 +64,41 @@ class _EmailValidationFormState extends State<EmailValidationForm> {
                   // You can send it to a server or use it as needed.
                   // String enteredEmail = _emailController.text;
                   // print('Valid email: $enteredEmail');
-                  GoRouter.of(context).go("/");
+                  showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => AlertDialog(
+                      title: Image.asset(
+                        "assets/icons/check.png",
+                        height: 150,
+                      ),
+                      content: Text(
+                        'Enviado',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.poppins(
+                            fontSize: 34,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      // actions: <Widget>[
+                      //   TextButton(
+                      //     onPressed: () => Navigator.pop(context, 'OK'),
+                      //     child: const Text('OK'),
+                      //   ),
+                      // ],
+                    ),
+                  );
+                  Future.delayed(
+                    Duration(seconds: 2),
+                    () {
+                      // <-- Delay here
+                      setState(
+                        () {
+                          GoRouter.of(context).go(
+                              '/reset_password_code_screen'); // <-- Code run after delay
+                        },
+                      );
+                    },
+                  );
                 }
               },
               style: TextButton.styleFrom(

@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:unad_app/Screens/forgot_password.dart';
 import 'package:unad_app/Screens/log_in.dart';
 import 'package:unad_app/Screens/Sign_up.dart';
+import 'package:unad_app/Screens/new_password.dart';
+import 'package:unad_app/Screens/reset_password_code_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +33,20 @@ final GoRouter _router = GoRouter(
           name: "ForgotPasswordScreen",
           builder: (BuildContext context, GoRouterState state) {
             return const ForgotPasswordScreen();
+          },
+        ),
+        GoRoute(
+          path: 'reset_password_code_screen',
+          name: "CodeScreenPR",
+          builder: (BuildContext context, GoRouterState state) {
+            return const CodeScreenPR();
+          },
+        ),
+        GoRoute(
+          path: 'new_password',
+          name: "NewPasswordScreen",
+          builder: (BuildContext context, GoRouterState state) {
+            return const NewPasswordScreen();
           },
         ),
       ],
